@@ -1,0 +1,79 @@
+:root {
+    --pink: rgb(235, 97, 154);
+    --blue: rgb(56, 104, 177);
+}
+
+body {
+    background: linear-gradient(to right, var(--pink), var(--blue));
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 2rem;
+    display: grid;
+    gap: 20px;
+   /* - Make the grid 10 columns wide, every other taking up twice the free space*/
+    grid-template-columns: repeat(5, 1fr 2fr);
+    /* - Make the grid have 10 explicit rows, 50px high each*/
+    grid-template-rows: repeat(10, 50px);
+  
+  
+}
+
+.item {
+    background-color: orangered;
+    text-align: center;
+    border: 1px solid peru;
+    font-size: 2rem;
+}
+
+.item1 {
+    /*- With item 1, start at col 3 and go until col 5*/
+    grid-column: 3/ 5;
+}
+
+.item2 {
+    /*- With item2, start a col 5 and go until the end*/
+    grid-column: 5 / -1;
+}
+
+.item5 {
+    /*With item5, double span 2 cols and rows*/
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+.item8 {
+    /*- Make item8 two rows high*/
+    grid-row:  span 2;
+}
+
+.item15 {
+    /*- Make item15 span the entire grid width*/
+    grid-column: 1 / -1;
+}
+
+.item18 {
+    /*- Make item18 span 5 cols but end at 9th*/
+    grid-column: span 4 / 9;
+}
+
+.item20 {
+    grid-row: 4 / span 3;
+}
+
+/*
+ - Make the grid 10 columns wide, every other taking up twice the free space
+ - Make the grid have 10 explicit rows, 50px high each
+ - With item 1, start at col 3 and go until col 5
+ - With item2, start a col 5 and go until the end
+ - Make item8 two rows high;
+ - Make item15 span the entire grid width
+ - Make item18 span 5 cols but end at 9th
+ - Make intem20 start at row 4 and span for 3 rows
+
+
+
+*/

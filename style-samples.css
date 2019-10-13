@@ -1,0 +1,94 @@
+/*part 1*/
+.container {
+    margin: 2rem;
+    display: grid;
+   /* grid-template-columns:  200px 300px 50px;*/
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 100px 400px;
+    gap: 20px;
+}
+
+/*part - 2 row autosiszing*/
+.container {
+    margin: 2rem;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 200px 400px;
+    grid-template-rows: 50px 100px;
+    grid-auto-rows: 200px;
+}
+
+
+/*part -3 auto-flow for extra rows*/
+
+.container {
+    margin: 2rem;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 400px 200px;
+    grid-auto-flow: column;
+    grid-auto-columns: 50px;
+}
+
+/*part 4 - sizing tracks*/
+.container {
+    margin: 2rem;
+    display: grid;
+    gap: 20px;
+    /*25% first*/
+    /* grid-template-columns: 1fr 1fr;*/
+    grid-template-columns: auto 1fr;
+    border: 2px solid white;
+  
+}
+
+/*part 5 - repeat*/
+
+.container {
+    margin: 2rem;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+  
+}
+
+/*part 6 - spanning*/
+
+.container {
+    margin: 2rem;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  
+}
+
+.item5 {
+    grid-column: span 2;
+    grid-row: span 4;
+    
+}
+
+/*positioning */
+
+margin: 2rem;
+display: grid;
+gap: 20px;
+grid-template-columns: repeat(3, 1fr);
+
+}
+
+.item {
+background-color: orangered;
+text-align: center;
+border: 1px solid peru;
+font-size: 2rem;
+}
+
+.item5 {
+/*positioning*/
+/*across 1/ - 1*/
+grid-column: span 2;
+grid-row: 1 / -1;
+background-color: greenyellow;
+
+}
